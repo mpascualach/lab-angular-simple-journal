@@ -2,7 +2,8 @@
   my-home works!
 </p>
 
-<div *ngFor="let entries of list">
-  <li>{{entries.title}}</li>
-  <li>{{entries.date}}</li>
+<div *ngFor="let l of list">
+  <li>{{l.title}}</li>
+  <li>{{l.date}}</li>
+  <li><a [routerLink]="['', ':id']">Details</a></li>
 </div>

@@ -8,14 +8,18 @@ import { RetrieveJournalEntriesService } from './services/retrieve-journal-entri
 
 import { AppComponent } from './app.component';
 import { MyHomeComponent } from './my-home/my-home.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes = [
-  { path: '', component: MyHomeComponent}
+  { path: '', component: MyHomeComponent },
+  { path: ':id', component: DetailsComponent},
+  { path: '**', redirectTo: ''}
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    MyHomeComponent
+    MyHomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
